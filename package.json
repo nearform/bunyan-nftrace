@@ -1,0 +1,25 @@
+{
+  "name": "bunyan-lttng",
+  "version": "1.0.0",
+  "description": "LTTNG stream for Bunyan",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "./node_modules/.bin/turbo test"
+  },
+  "keywords": [
+    "lttng",
+    "bunyan",
+    "logging",
+    "dtrace"
+  ],
+  "author": "Damian Beresford",
+  "license": "MIT",
+  "dependencies": {
+    "bunyan": "^1.2.3",
+    "debug": "^2.1.1"
+  },
+  "devDependencies": {
+    "turbo-test-runner": "^0.4.1"
+  }
+}

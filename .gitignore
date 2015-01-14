@@ -1,0 +1,7 @@
+*~
+node_modules/
+cov-accept/
+cov-unit/
+coverage/
+plato/
+build/

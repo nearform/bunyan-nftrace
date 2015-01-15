@@ -1,5 +1,5 @@
 var bunyan = require('bunyan');
-var lttng = require('..');
+var nftrace = require('..');
 
 exports.it_should_log_something = function(done) {
   var log = bunyan.createLogger({
@@ -7,7 +7,7 @@ exports.it_should_log_something = function(done) {
     streams: [{
       level: 'debug',
       type: 'raw',
-      stream: lttng.createBunyanStream()
+      stream: nftrace.createBunyanStream()
     }]
   });
 

@@ -2,8 +2,8 @@
   "targets": [
     {
       "target_name": "lttng",
-      "sources": [ "./src/lttng.cc", "./src/lttng-tp.c" ],
-      "include_dirs": [ "./src" ],
+      "sources": [ "./src/lttng.cc", "./src/lttng-tp.cc" ],
+      "include_dirs": [ "<!(node -e \"require('nan')\")", "./src" ],
       "libraries": [ "-llttng-ust" ]
     }
   ]

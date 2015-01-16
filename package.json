@@ -1,10 +1,11 @@
 {
-  "name": "bunyan-lttng",
+  "name": "bunyan-nftrace",
   "version": "1.0.0",
   "description": "LTTNG stream for Bunyan",
   "main": "index.js",
   "private": true,
   "scripts": {
+    "install": "./scripts/install.js",
     "test": "./node_modules/.bin/turbo test"
   },
   "keywords": [

@@ -19,7 +19,7 @@
     "bunyan": "^1.2.3",
     "debug": "^2.1.1",
     "bindings": "^1.2.1",
-    "nan": "^1.2.0"
+    "nan": "^1.4.3"
   },
   "devDependencies": {
     "turbo-test-runner": "^0.4.1"

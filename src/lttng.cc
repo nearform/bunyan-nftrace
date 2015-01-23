@@ -14,43 +14,29 @@ NAN_METHOD(Log) {
   int level =  args[0].As<Number>()->IntegerValue();
   
   String::AsciiValue string(args[1]);
-  char *message = (char *) malloc(string.length() + 1);
-  strcpy(message, *string);
   
   switch(level){
   	case 10:
-  		tracepoint(bunyan, trace, message);
+  		tracepoint(bunyan, trace, *string);
   		break;
   	case 20:
-  		tracepoint(bunyan, debug, message);
+  		tracepoint(bunyan, debug, *string);
   		break;
   	case 30:
-  		tracepoint(bunyan, info, message);
+  		tracepoint(bunyan, info, *string);
   		break;
   	case 40:
-  		tracepoint(bunyan, warn, message);
+  		tracepoint(bunyan, warn, *string);
   		break;
   	case 50:
-  		tracepoint(bunyan, error, message);
+  		tracepoint(bunyan, error, *string);
   		break;
   	case 60:
-  		tracepoint(bunyan, fatal, message);
+  		tracepoint(bunyan, fatal, *string);
   		break;
   }
 
   NanReturnUndefined();
-}
-
-char* get(Local<Value> value, const char *fallback = "") {
-    if (value->IsString()) {
-        String::AsciiValue string(value);
-        char *str = (char *) malloc(string.length() + 1);
-        strcpy(str, *string);
-        return str;
-    }
-    char *str = (char *) malloc(strlen(fallback) + 1);
-    strcpy(str, fallback);
-    return str;
 }
 
 void Init(Handle<Object> exports) {

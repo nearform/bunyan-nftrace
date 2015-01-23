@@ -1,6 +1,6 @@
-# Bunyan-LTTNG
+# Bunyan-nftrace
 
-Bunyan stream for LTTNG.
+Bunyan stream support for tracing (using lttng right now).
 
 # Installation
 
@@ -8,14 +8,14 @@ Bunyan stream for LTTNG.
 
 ```javascript
 var bunyan = require('bunyan');
-var lttng = require('bunyan-lttng');
+var nftrace = require('bunyan-nftrace');
 
 var log = bunyan.createLogger({
     name: 'foo',
     streams: [ {
         level: 'debug',
         type: 'raw',
-        stream: lttng.createBunyanStream()
+        stream: nftrace.createBunyanStream()
     }]
 });
 

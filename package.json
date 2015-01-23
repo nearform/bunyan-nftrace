@@ -1,10 +1,11 @@
 {
-  "name": "bunyan-lttng",
+  "name": "bunyan-nftrace",
   "version": "1.0.0",
   "description": "LTTNG stream for Bunyan",
   "main": "index.js",
   "private": true,
   "scripts": {
+    "install": "./scripts/install.js",
     "test": "./node_modules/.bin/turbo test"
   },
   "keywords": [
@@ -17,7 +18,9 @@
   "license": "MIT",
   "dependencies": {
     "bunyan": "^1.2.3",
-    "debug": "^2.1.1"
+    "debug": "^2.1.1",
+    "bindings": "^1.2.1",
+    "nan": "^1.4.3"
   },
   "devDependencies": {
     "turbo-test-runner": "^0.4.1"
